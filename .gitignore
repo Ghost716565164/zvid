@@ -53,3 +53,5 @@ dist
 
 Dockerfile
 .dockerignore
+
+/src/script.ts
