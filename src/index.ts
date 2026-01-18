@@ -145,7 +145,10 @@ export default function renderVideo(
       totalFramesNumber,
       progress,
       puppeteerManager,
-      onCleanup: () => filterScript.cleanup(),
+      onCleanup: () => {
+        filterScript.cleanup();
+        puppeteerManager.closeBrowser();
+      },
       onSuccess: async () => {
         const fileSize = safeStatSizeSync(outputPath);
 
